@@ -26,34 +26,34 @@ Comment box and Auto suggestions might not work if you do not do the following s
 <table>
 <tr>
     <td>
-        <img src="img/1.png" width="80%">
+        <img src="img/1.png" width="100%">
     </td>
     <td>
-        <img src="img/2.png" width="80%">
-    </td>
-</tr>
-<tr>
-    <td>
-        <img src="img/3.png" width="80%">
-    </td>
-    <td>
-        <img src="img/4.png" width="80%">
+        <img src="img/2.png" width="100%">
     </td>
 </tr>
 <tr>
     <td>
-        <img src="img/m1.png" width="80%">
+        <img src="img/3.png" width="100%">
     </td>
     <td>
-        <img src="img/m2.png" width="80%">
+        <img src="img/4.png" width="100%">
     </td>
 </tr>
 <tr>
     <td>
-        <img src="img/m3.png" width="80%">
+        <img src="img/m1.png" width="100%">
     </td>
     <td>
-        <img src="img/m4.png" width="80%">
+        <img src="img/m2.png" width="100%">
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="img/m3.png" width="100%">
+    </td>
+    <td>
+        <img src="img/m4.png" width="100%">
     </td>
 </tr>
 
