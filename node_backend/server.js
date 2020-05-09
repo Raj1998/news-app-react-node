@@ -206,7 +206,7 @@ app.get('/api/mobile', async   (req, res) => {
         else{
             url = `https://content.guardianapis.com/${sec}?api-key=${api_key_guardian}&show-blocks=all`
         }
-            fetched_data = await fetch(url)
+            let fetched_data = await fetch(url)
             fetched_data = await fetched_data.json()
             fetched_data = fetched_data.response.results
 
@@ -264,7 +264,7 @@ app.get('/api/mobile', async   (req, res) => {
                 }
                 
 
-                curr_news = {
+                let curr_news = {
                     "id": id, 
                     "title": title,
                     // "desc": desc,
@@ -339,7 +339,7 @@ app.get('/api/mobile/article', async (req, res) => {
         section = m_data.sectionName
         url = m_data.webUrl
 
-        curr_news = {
+        let curr_news = {
             "id": id, 
             "title": title,
             "desc": desc,
@@ -423,7 +423,7 @@ app.get('/api/mobile/search', async (req, res) => {
             } catch (error) {
                 image_url = "https://assets.guim.co.uk/images/eada8aa27c12fe2d5afa3a89d3fbae0d/fallback-logo.png"
             }
-            curr_news = {
+            let curr_news = {
                 "id": id, 
                 "title": title,
                 // "desc": desc,
