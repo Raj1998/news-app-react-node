@@ -1,38 +1,148 @@
-.App {
-  text-align: center;
+.color-nav{
+  background-color: #203058;
+  background-image: linear-gradient(to bottom right, #203058, #3f5eb0);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@media (max-width: 992px){
+  
+  .nav-container{
+    display: flex;
+    width: 100%;
+  }
+  .search-bar {
+    flex: 8;
+    margin-right: 1em;
+  }
+  .wideShare{
+    margin-right: 2em !important;
+  }
+
+  .mobileSpinner{
+    display: none;
+  }
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 768px){
+  .cardBody{
+    padding-left: 0px !important;
+    /* color: red */
+  }
+  .cardImg{
+    padding-right: 0em !important;   
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media (max-width: 767px){
+  .cardImg{
+    padding-bottom: 0px !important;
+    /* color: red */
+  }
+
+}
+
+.cardImg{
+  /* padding-right: 0px !important;    */
+  padding: 1em;
+}
+
+
+.wideShare{
+  margin-right: 4em;
+}
+
+.artDesc {
+  text-align: justify;
+
+}
+
+.showLess {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.CardHome, .cardFav {
+  box-shadow: 4px 3px 8px 0px #cacaca;
+  
+}
+
+.CardHome {
+  cursor: pointer;
+}
+
+img {
+  border: 1px solid #dadada !important;
+  padding: 2px;
+}
+
+
+.desc{
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.sec{
+  float: right;  
+  border-radius: 0.2em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  background-color: rgb(111, 117, 123);
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+}
+
+#world{
+  background-color: rgb(116, 87, 246);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#politics{
+  background-color: rgb(87, 146, 136);
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#business{
+  background-color: rgb(89, 150, 229);
+  color: white;
+}
+
+#technology{
+  background-color: rgb(209, 218, 89);
+  color: black
+}
+
+#sports{
+  background-color: rgb(238, 195, 92);
+  color: black
+}
+
+#sport{
+  background-color: rgb(238, 195, 92);
+  color: black
+}
+
+#Guardian{
+  background-color: rgb(24, 40, 72);
+  color: white;
+}
+
+#NYTimes{
+  background-color: rgb(221, 221, 221);
+  color: black
+}
+
+.Toastify__toast--default {
+  background: #fff;
+  color: #000;
+}
+
+.rightIcons a:hover {
+  cursor: default;
 }
