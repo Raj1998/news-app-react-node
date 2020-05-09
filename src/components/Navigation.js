@@ -7,6 +7,7 @@ import { Link, withRouter } from 'react-router-dom'
 // import {DebounceInput} from 'react-debounce-input';
 import _ from 'lodash';
 import ReactTooltip from 'react-tooltip'
+import {azureBaseUrl, azureKey} from '../Data'
 // import AsyncSearch from './AsyncSearch';
 
 // import { DataContext } from './DataContext';
@@ -16,10 +17,6 @@ let options = [
     // { value: 'strawberry', label: 'Strawberry' },
     // { value: 'vanilla', label: 'Vanilla' }
   ]
-
-const azureBaseUrl = "https://rajpatel.cognitiveservices.azure.com/bing/v7.0/suggestions"
-
-
 
 
 
@@ -128,7 +125,7 @@ class Navigation extends Component {
                 {
                     method: 'GET',
                     headers: {
-                        'Ocp-Apim-Subscription-Key': 'ac024cec74564fddaf6810bf13a1702a'
+                        'Ocp-Apim-Subscription-Key': azureKey
                     }
                 }
             )

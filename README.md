@@ -17,5 +17,6 @@
 `cd node_backend && npm start`
 
 ## Notes
+Comment box and Auto suggestions might not work if you do not do the following steps
 
-Update src/Data.js file with your API keys, according to example given in src/Data_Ex.js
+`mkdir src/Data.js` file with your API keys, according to example given in `src/Data_Ex.js`
