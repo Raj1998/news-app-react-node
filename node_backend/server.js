@@ -125,32 +125,9 @@ app.get('/api/api_endpoints', (req, res) => {
 })
 
 
-app.get('/api/test1', (req, res) => {
-    googleTrends.interestOverTime({keyword: 'Coronavirus', startTime: new Date("2019-06-01")})
-    // googleTrends.interestOverTime({keyword: 'Amazon', startTime: new Date("2019-06-01")})
-    .then(function(results){
-        results = JSON.parse(results)
 
-        results = results.default.timelineData
-        
-        let count = {}
-        let answer = []
-        // console.log(results.length)
-        results.forEach( item => {
-            // console.log(item.value[0])
-            answer.push(item.value[0])
-            count[item.value[0]] = (count[item.value[0]] || 0) + 1
-        })
-        // console.log(count)
-        
-        res.send(answer)
-    })
-    .catch(function(err){
-        console.error(err);
-        res.send({"msg": "oops"})
-    });
 
-})
+// =============== modified response for mobile devices ===================
 
 app.post('/api/mobile/search', (req, res) => {
 
@@ -183,7 +160,6 @@ app.post('/api/mobile/search', (req, res) => {
 })
 
 
-// =============== modified response for mobile devices ===================
 
 app.get('/api/mobile', async   (req, res) => {
 
@@ -199,7 +175,7 @@ app.get('/api/mobile', async   (req, res) => {
     
     
     try {
-        if (sec === undefined || sec === ""){
+        if (sec === undefined || sec === "x"){
             url = `https://content.guardianapis.com/search?order-by=newest&show-fields=starRating,headline,thumbnail,short-url&api-key=${api_key_guardian}`
             // url = `https://content.guardianapis.com/search?api-key=${api_key_guardian}&section=(sport|business|technology|politics)&show-blocks=all`
         }
@@ -245,7 +221,7 @@ app.get('/api/mobile', async   (req, res) => {
                 
                 
 
-                if (sec === undefined || sec === ""){
+                if (sec === undefined || sec === "x"){
                     if (element.fields === undefined || element.fields.thumbnail === undefined ){
                         image_url = "https://assets.guim.co.uk/images/eada8aa27c12fe2d5afa3a89d3fbae0d/fallback-logo.png"
                     }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Home from './components/Home'
-import { Switch, Route, withRouter } from 'react-router-dom'
+import { Switch, Route, withRouter, HashRouter } from 'react-router-dom'
 // // import CardHomepage from './components/CardHomepage'
 // import World from './components/World'
 // import Politics from './components/Politics'
@@ -163,6 +163,7 @@ class App extends Component{
     
     return (
       <DataProvider>
+        <HashRouter>
         <div className="App">
           {/* {this.state.path} */}
             <Navigation switchProp={this.switchChange} pathChange={this.pathChangeHandler} path={this.state.path} asyncKey={this.state.asyncKey} svalue={this.state.svalue} />
@@ -176,6 +177,7 @@ class App extends Component{
             </Switch>
             
         </div>
+        </HashRouter>
       </DataProvider>
     );
   }
