@@ -1,3 +1,4 @@
+Responsive WebApp for latest news feed in various categories. Created using NodeJs and ReactJs.
 ## Dev
 `npm install`
 
